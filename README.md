@@ -39,7 +39,7 @@ The following fields from the master volume will be copied to the newly imported
 - author_sort
 
 The newly imported book will also have the following fields set:
-- title - in the format of "`<series> (<series_index>)"
+- title - in the format of `<series> (<series_index>)`
 - title_sort - same as title
 
 ### Retrofitting
