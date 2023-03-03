@@ -39,10 +39,14 @@ The following fields from the master volume will be copied to the newly imported
 - author_sort
 
 The newly imported book will also have the following fields set:
-- title - in the format of "`<series> (<series_index>)"
+- title - in the format of `<series> (<series_index>)`
 - title_sort - same as title
 
 ### Retrofitting
 If you have existing books in your library that you want to include in this system, all you have to do is manually add an identifier to the ids field. Again, this should be in the format of `cmoa:<cid>-<volume>`, no leading zeros.
 
 You may also want to run the included utility script (`bulk_apply.py`) to automatically generate ids for each volume in every series with a master volume. In the future I might add a toolbar button for this.
+
+### Extra
+Convert `cmoa:` ids into clickable links with the following rule
+```https://www.cmoa.jp/title/{id:'re($, "-.*","")'}/vol/{id:'re($, ".*-","")'}/```
